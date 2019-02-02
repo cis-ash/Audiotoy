@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Merge13SAM_trial4.bmp.ogg-5c17caa325dd488feace32498ef7ac78.oggstr"
+
+[deps]
+
+source_file="res://Samples/Merge13SAM_trial4.bmp.ogg"
+dest_files=[ "res://.import/Merge13SAM_trial4.bmp.ogg-5c17caa325dd488feace32498ef7ac78.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

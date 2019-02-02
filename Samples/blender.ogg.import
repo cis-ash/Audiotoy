@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blender.ogg-bb2ea0f0bb1ff935c6c0898fcf6079e8.oggstr"
+
+[deps]
+
+source_file="res://Samples/blender.ogg"
+dest_files=[ "res://.import/blender.ogg-bb2ea0f0bb1ff935c6c0898fcf6079e8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
