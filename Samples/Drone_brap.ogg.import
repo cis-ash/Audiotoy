@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_brap.ogg-33598c5fde09807f03e42ece67705a36.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone_brap.ogg"
+dest_files=[ "res://.import/Drone_brap.ogg-33598c5fde09807f03e42ece67705a36.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

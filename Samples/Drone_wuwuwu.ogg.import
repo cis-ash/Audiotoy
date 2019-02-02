@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_wuwuwu.ogg-cb1a90cbbd992b98318509f3c2e0f229.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone_wuwuwu.ogg"
+dest_files=[ "res://.import/Drone_wuwuwu.ogg-cb1a90cbbd992b98318509f3c2e0f229.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

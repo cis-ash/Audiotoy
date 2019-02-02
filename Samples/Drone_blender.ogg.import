@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_blender.ogg-78bee6de6e66bb8f52a5143a6c5c6cab.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone_blender.ogg"
+dest_files=[ "res://.import/Drone_blender.ogg-78bee6de6e66bb8f52a5143a6c5c6cab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

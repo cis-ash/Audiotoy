@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_bzap.ogg-e971e8d9394ae5185307d4bca7c118c7.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone_bzap.ogg"
+dest_files=[ "res://.import/Drone_bzap.ogg-e971e8d9394ae5185307d4bca7c118c7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

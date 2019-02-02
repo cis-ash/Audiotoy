@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/roar_note.ogg-8c56a75ae1028479d33618b41e5bcc6c.oggstr"
+
+[deps]
+
+source_file="res://Samples/roar_note.ogg"
+dest_files=[ "res://.import/roar_note.ogg-8c56a75ae1028479d33618b41e5bcc6c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

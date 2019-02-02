@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blendernote.ogg-6c590a29c4a6bff82575547b521be336.oggstr"
+
+[deps]
+
+source_file="res://Samples/blendernote.ogg"
+dest_files=[ "res://.import/blendernote.ogg-6c590a29c4a6bff82575547b521be336.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
