@@ -8,7 +8,7 @@ var animation = ["sine","square","saw","triangle"]
 var is_static = true
 var selected_volume_animation = 1
 var selected_bus = 0
-
+var bordercolor = Color()
 
 var volume_amplitude = 0.0
 var pitch_amplitude = 0.0
@@ -18,6 +18,13 @@ var volume_base = 0.0
 var pitch_base = 0.0
 var actual_pitch = 0.0
 var actual_volume = 0.0
+
+export var high_pitch_color = Color()
+export var Low_pitch_color = Color()
+var lowest_pitch = -10
+var highest_pitch = 20
+var lowest_volume = -40
+var highest_volume = 0
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -30,16 +37,30 @@ func _ready():
 	pass
 
 func _process(delta):
+	var sample = get_node(samples[selected_sample])
 	if is_static:
 		actual_volume = $Container/Panel/Volume.value
+		actual_pitch = $Container/Panel/Pitch.value
 		$Container/Panel/Volume.editable = true
 		$Container/Panel/Pitch.editable = true
 		$Pitch_animation.playback_speed = 0
 		$Volume_animation.playback_speed = 0
+		
 		if $Container/Panel/Pitch.value>=0: 
 			applied_pitch = 1*($Container/Panel/Pitch.value+1)
 		else:
 			applied_pitch = 1/(-$Container/Panel/Pitch.value+1)
+		
+		if sample.playing == true:
+			var blendfactor = ($Container/Panel/Pitch.value - lowest_pitch)/(highest_pitch - lowest_pitch)
+			var brightnes = (actual_volume - lowest_volume)/(highest_volume - lowest_volume)
+			bordercolor.r = (Low_pitch_color.r*blendfactor + high_pitch_color.r*(1-blendfactor))*brightnes
+			bordercolor.g = (Low_pitch_color.g*blendfactor + high_pitch_color.g*(1-blendfactor))*brightnes
+			bordercolor.b = (Low_pitch_color.b*blendfactor + high_pitch_color.b*(1-blendfactor))*brightnes
+		else:
+			bordercolor.r = 0
+			bordercolor.b = 0
+			bordercolor.g = 0
 	else:
 		volume_amplitude = $Container/Panel/Volume/Amplitude.value
 		volume_speed = $Container/Panel/Volume/Speed.value
@@ -61,16 +82,37 @@ func _process(delta):
 		if pitch>=0: 
 			applied_pitch = 1*(actual_pitch+1)
 		else:
-			applied_pitch = 1/(-actual_pitch+1)
+			applied_pitch = 1/(abs(actual_pitch)+1)
+		
+#		if sample.playing == true:
+#			var blendfactor = (actual_pitch - lowest_pitch)/(highest_pitch - lowest_pitch)
+#			var brightnes = (actual_volume - lowest_volume)/(highest_volume - lowest_volume)
+#			bordercolor.r = (Low_pitch_color.r*blendfactor + high_pitch_color.r*(1-blendfactor))*brightnes
+#			bordercolor.g = (Low_pitch_color.g*blendfactor + high_pitch_color.g*(1-blendfactor))*brightnes
+#			bordercolor.b = (Low_pitch_color.b*blendfactor + high_pitch_color.b*(1-blendfactor))*brightnes
+#		else:
+#			bordercolor.r = 0
+#			bordercolor.b = 0
+#			bordercolor.g = 0
 	
 	
-	var sample = get_node(samples[selected_sample])
 	
+	if sample.playing == true:
+		var blendfactor = (actual_pitch - lowest_pitch)/(highest_pitch - lowest_pitch)
+		var brightnes = (actual_volume - lowest_volume)/(highest_volume - lowest_volume)
+		bordercolor.r = (Low_pitch_color.r*blendfactor + high_pitch_color.r*(1-blendfactor))*brightnes
+		bordercolor.g = (Low_pitch_color.g*blendfactor + high_pitch_color.g*(1-blendfactor))*brightnes
+		bordercolor.b = (Low_pitch_color.b*blendfactor + high_pitch_color.b*(1-blendfactor))*brightnes
+	else:
+		bordercolor.r = 0
+		bordercolor.b = 0
+		bordercolor.g = 0
 	
+	$Container/Panel/Polygon2D.color = bordercolor
 	
-	
-	print(pitch)
-	print(volume)
+	print("---")
+	print(actual_pitch)
+	print(actual_volume)
 	
 	sample.pitch_scale = max(applied_pitch,0)
 	sample.volume_db = actual_volume

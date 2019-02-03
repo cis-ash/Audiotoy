@@ -34,7 +34,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=2]
 
 resource_name = "sine"
-length = 1.0
+length = 1.2
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -44,10 +44,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0, 0.0, -1.0 ]
+"values": [ 0.0, 0.5, 1.0, 0.5, 0.0, -0.5, -1.0, -0.5 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -110,9 +110,9 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=6]
 
 resource_name = "sine"
-length = 1.0
+length = 1.2
 loop = true
-step = 0.08
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:pitch")
 tracks/0/interp = 2
@@ -120,10 +120,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0, 0.0, -1.0 ]
+"values": [ 0.0, 0.5, 1.0, 0.5, 0.0, -0.5, -1.0, -0.5 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -186,6 +186,8 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 volume = 0.0
 pitch = 0.0
+high_pitch_color = Color( 0.172549, 0.909804, 0.960784, 1 )
+Low_pitch_color = Color( 1, 0, 0.266667, 1 )
 
 [node name="Volume_animation" type="AnimationPlayer" parent="." index="0"]
 
@@ -330,9 +332,9 @@ anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
-margin_top = -1.0
+margin_top = -11.0
 margin_right = -10.0
-margin_bottom = 38.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -347,9 +349,9 @@ anchor_top = 0.5
 anchor_right = 0.0
 anchor_bottom = 0.5
 margin_left = 10.0
-margin_top = -19.5
+margin_top = -15.0
 margin_right = 120.0
-margin_bottom = 4.5
+margin_bottom = 9.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -412,8 +414,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-min_value = -20.0
-max_value = 20.0
+min_value = -40.0
+max_value = 0.0
 step = 0.001
 page = 0.0
 value = 0.0
@@ -453,7 +455,6 @@ selected = 0
 
 [node name="Speed" type="SpinBox" parent="Container/Panel/Volume" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -485,8 +486,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 5.0
 margin_right = 174.0
-margin_bottom = 21.0
+margin_bottom = 26.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -531,8 +533,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 5.0
 margin_right = 174.0
-margin_bottom = 18.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -546,7 +549,6 @@ max_lines_visible = -1
 
 [node name="Base" type="SpinBox" parent="Container/Panel/Volume" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -560,11 +562,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-min_value = -20.0
-max_value = 20.0
+min_value = -40.0
+max_value = 0.0
 step = 0.1
 page = 0.0
-value = 0.0
+value = -5.0
 exp_edit = false
 rounded = false
 editable = true
@@ -578,8 +580,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 5.0
 margin_right = 174.0
-margin_bottom = 18.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -703,8 +706,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 6.0
 margin_right = 174.0
-margin_bottom = 21.0
+margin_bottom = 27.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -718,7 +722,6 @@ max_lines_visible = -1
 
 [node name="Amplitude" type="SpinBox" parent="Container/Panel/Pitch" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -750,8 +753,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 5.0
 margin_right = 174.0
-margin_bottom = 18.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -796,8 +800,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 80.0
+margin_top = 5.0
 margin_right = 174.0
-margin_bottom = 18.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -892,16 +897,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 80.0
-margin_right = 122.0
-margin_bottom = 18.0
+margin_left = 75.0
+margin_top = 5.0
+margin_right = 117.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "bus"
+text = "effect"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -914,24 +920,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 130.0
 margin_right = 134.0
-margin_bottom = 200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="HSeparator" type="HSeparator" parent="Container/Panel/VSeparator" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -129.0
-margin_top = 185.0
-margin_right = 371.0
-margin_bottom = 195.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -947,7 +936,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 309.0
 margin_right = 313.0
-margin_bottom = 200.0
+margin_bottom = 185.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -961,9 +950,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 500.0
-margin_right = 504.0
-margin_bottom = 200.0
+margin_left = 309.0
+margin_right = 313.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -971,20 +960,20 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="VSeparator4" type="VSeparator" parent="Container/Panel" index="9"]
+[node name="Polygon2D" type="Polygon2D" parent="Container/Panel" index="9"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 4.0
-margin_bottom = 200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+polygon = PoolVector2Array( -5, 0, -5, 190, 505, 190, 505, -5, -5, -5, -5, 0, 0, 0, 500, 0, 500, 185, 0, 185, 0, 0 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
 
 [connection signal="item_selected" from="Container/Panel/Sample selector" to="." method="_on_Sample_selector_item_selected"]
 

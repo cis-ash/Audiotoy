@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=11 format=2]
+[gd_resource type="AudioBusLayout" load_steps=13 format=2]
 
 [sub_resource type="AudioEffectLimiter" id=1]
 
@@ -27,6 +27,11 @@ range_max_hz = 700.0
 rate_hz = 0.5
 feedback = 0.7
 depth = 1.0
+
+[sub_resource type="AudioEffectAmplify" id=11]
+
+resource_name = "Amplify"
+volume_db = -5.0
 
 [sub_resource type="AudioEffectChorus" id=4]
 
@@ -102,6 +107,11 @@ dry = 0.68
 wet = 0.24
 _sections_unfolded = [ "Predelay" ]
 
+[sub_resource type="AudioEffectAmplify" id=12]
+
+resource_name = "Amplify"
+volume_db = -5.0
+
 [sub_resource type="AudioEffectPanner" id=10]
 
 resource_name = "Panner"
@@ -131,6 +141,8 @@ bus/2/volume_db = 0.0
 bus/2/send = "Master"
 bus/2/effect/0/effect = SubResource( 3 )
 bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource( 11 )
+bus/2/effect/1/enabled = true
 bus/3/name = "New Bus 3"
 bus/3/solo = false
 bus/3/mute = false
@@ -179,6 +191,8 @@ bus/8/volume_db = 0.0
 bus/8/send = "Master"
 bus/8/effect/0/effect = SubResource( 9 )
 bus/8/effect/0/enabled = true
+bus/8/effect/1/effect = SubResource( 12 )
+bus/8/effect/1/enabled = true
 bus/9/name = "New Bus 9"
 bus/9/solo = false
 bus/9/mute = false
