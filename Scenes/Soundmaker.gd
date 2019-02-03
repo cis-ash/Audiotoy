@@ -2,7 +2,7 @@ extends Control
 var volume = 0.0
 var pitch = 0.0
 var selected_sample = 1
-var samples = ["Samples/Blender","Samples/Godot","Samples/Merge","Samples/Picture"]
+var samples = ["Samples/Drone 1","Samples/Drone 2","Samples/Drone 3","Samples/Drone 4","Samples/Drone 5","Samples/Drone 6"]
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
