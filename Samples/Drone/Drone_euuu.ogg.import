@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_euuu.ogg-26c5e2ef23754f73c92566261d3231c7.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone/Drone_euuu.ogg"
+dest_files=[ "res://.import/Drone_euuu.ogg-26c5e2ef23754f73c92566261d3231c7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

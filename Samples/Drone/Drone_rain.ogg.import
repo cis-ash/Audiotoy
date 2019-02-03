@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_rain.ogg-ea65b82929102ca4dbefe3e512f718a3.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone/Drone_rain.ogg"
+dest_files=[ "res://.import/Drone_rain.ogg-ea65b82929102ca4dbefe3e512f718a3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

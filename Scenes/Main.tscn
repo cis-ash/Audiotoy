@@ -1,5 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Base" type="Node2D" index="0"]
+[ext_resource path="res://Scenes/drone.tscn" type="PackedScene" id=1]
+
+[node name="Base" type="Node2D"]
+
+[node name="Control" parent="." index="0" instance=ExtResource( 1 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 192.0
+margin_top = 129.0
+margin_right = 251.0
+margin_bottom = 195.0
 
 

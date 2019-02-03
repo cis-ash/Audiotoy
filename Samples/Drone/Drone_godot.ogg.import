@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone_godot.ogg-fcb286a15f1bd2d1a86397ebc11474de.oggstr"
+
+[deps]
+
+source_file="res://Samples/Drone/Drone_godot.ogg"
+dest_files=[ "res://.import/Drone_godot.ogg-fcb286a15f1bd2d1a86397ebc11474de.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
