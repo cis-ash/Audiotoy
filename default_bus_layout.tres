@@ -28,12 +28,12 @@ rate_hz = 0.5
 feedback = 0.7
 depth = 1.0
 
-[sub_resource type="AudioEffectAmplify" id=11]
+[sub_resource type="AudioEffectAmplify" id=4]
 
 resource_name = "Amplify"
 volume_db = -5.0
 
-[sub_resource type="AudioEffectChorus" id=4]
+[sub_resource type="AudioEffectChorus" id=5]
 
 resource_name = "Chorus"
 voice_count = 4
@@ -64,7 +64,7 @@ voice/4/level_db = 0.0
 voice/4/cutoff_hz = 16000.0
 voice/4/pan = 0.0
 
-[sub_resource type="AudioEffectDistortion" id=5]
+[sub_resource type="AudioEffectDistortion" id=6]
 
 resource_name = "Distortion"
 mode = 0
@@ -73,7 +73,7 @@ keep_hf_hz = 16000.0
 drive = 0.0
 post_gain = 0.0
 
-[sub_resource type="AudioEffectLowPassFilter" id=6]
+[sub_resource type="AudioEffectLowPassFilter" id=7]
 
 resource_name = "LowPassFilter"
 cutoff_hz = 1000.0
@@ -81,7 +81,7 @@ resonance = 0.5
 gain = 1.0
 db = 0
 
-[sub_resource type="AudioEffectHighPassFilter" id=7]
+[sub_resource type="AudioEffectHighPassFilter" id=8]
 
 resource_name = "HighPassFilter"
 cutoff_hz = 3000.0
@@ -89,12 +89,12 @@ resonance = 0.5
 gain = 1.0
 db = 0
 
-[sub_resource type="AudioEffectPitchShift" id=8]
+[sub_resource type="AudioEffectPitchShift" id=9]
 
 resource_name = "PitchShift"
 pitch_scale = 0.5
 
-[sub_resource type="AudioEffectReverb" id=9]
+[sub_resource type="AudioEffectReverb" id=10]
 
 resource_name = "Reverb"
 predelay_msec = 150.0
@@ -107,12 +107,12 @@ dry = 0.68
 wet = 0.24
 _sections_unfolded = [ "Predelay" ]
 
-[sub_resource type="AudioEffectAmplify" id=12]
+[sub_resource type="AudioEffectAmplify" id=11]
 
 resource_name = "Amplify"
 volume_db = -5.0
 
-[sub_resource type="AudioEffectPanner" id=10]
+[sub_resource type="AudioEffectPanner" id=12]
 
 resource_name = "Panner"
 pan = -0.54
@@ -141,7 +141,7 @@ bus/2/volume_db = 0.0
 bus/2/send = "Master"
 bus/2/effect/0/effect = SubResource( 3 )
 bus/2/effect/0/enabled = true
-bus/2/effect/1/effect = SubResource( 11 )
+bus/2/effect/1/effect = SubResource( 4 )
 bus/2/effect/1/enabled = true
 bus/3/name = "New Bus 3"
 bus/3/solo = false
@@ -149,7 +149,7 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = "Master"
-bus/3/effect/0/effect = SubResource( 4 )
+bus/3/effect/0/effect = SubResource( 5 )
 bus/3/effect/0/enabled = true
 bus/4/name = "New Bus 4"
 bus/4/solo = false
@@ -157,7 +157,7 @@ bus/4/mute = false
 bus/4/bypass_fx = false
 bus/4/volume_db = 0.0
 bus/4/send = "Master"
-bus/4/effect/0/effect = SubResource( 5 )
+bus/4/effect/0/effect = SubResource( 6 )
 bus/4/effect/0/enabled = true
 bus/5/name = "New Bus 5"
 bus/5/solo = false
@@ -165,7 +165,7 @@ bus/5/mute = false
 bus/5/bypass_fx = false
 bus/5/volume_db = 0.0
 bus/5/send = "Master"
-bus/5/effect/0/effect = SubResource( 6 )
+bus/5/effect/0/effect = SubResource( 7 )
 bus/5/effect/0/enabled = true
 bus/6/name = "New Bus 6"
 bus/6/solo = false
@@ -173,7 +173,7 @@ bus/6/mute = false
 bus/6/bypass_fx = false
 bus/6/volume_db = 0.0
 bus/6/send = "Master"
-bus/6/effect/0/effect = SubResource( 7 )
+bus/6/effect/0/effect = SubResource( 8 )
 bus/6/effect/0/enabled = true
 bus/7/name = "New Bus 7"
 bus/7/solo = false
@@ -181,7 +181,7 @@ bus/7/mute = false
 bus/7/bypass_fx = false
 bus/7/volume_db = 0.0
 bus/7/send = "Master"
-bus/7/effect/0/effect = SubResource( 8 )
+bus/7/effect/0/effect = SubResource( 9 )
 bus/7/effect/0/enabled = true
 bus/8/name = "New Bus 8"
 bus/8/solo = false
@@ -189,9 +189,9 @@ bus/8/mute = false
 bus/8/bypass_fx = false
 bus/8/volume_db = 0.0
 bus/8/send = "Master"
-bus/8/effect/0/effect = SubResource( 9 )
+bus/8/effect/0/effect = SubResource( 10 )
 bus/8/effect/0/enabled = true
-bus/8/effect/1/effect = SubResource( 12 )
+bus/8/effect/1/effect = SubResource( 11 )
 bus/8/effect/1/enabled = true
 bus/9/name = "New Bus 9"
 bus/9/solo = false
@@ -199,7 +199,7 @@ bus/9/mute = false
 bus/9/bypass_fx = true
 bus/9/volume_db = 0.0
 bus/9/send = "Master"
-bus/9/effect/0/effect = SubResource( 10 )
+bus/9/effect/0/effect = SubResource( 12 )
 bus/9/effect/0/enabled = true
 bus/10/name = "New Bus 10"
 bus/10/solo = false
